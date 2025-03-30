@@ -25,14 +25,6 @@ function changeFirstGame() {
   games.value[0].name = 'wzry'
 }
 
-function changeCar() {
-  //reactive 的改对象的用法
-  Object.assign(car, { name: 'car233', price: 233 })
-
-  //ref改对象的写法
-  // car.value = { name: 'car233', price: 233 };
-}
-
 function changePrice() {
   car.price += 1
 }

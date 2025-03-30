@@ -15,22 +15,14 @@
 import { ref, reactive } from 'vue'
 let car = reactive({ name: 'car', price: 1000 })
 
-let games = ref([
+let games = reactive([
   { id: '11', name: 'wz' },
   { id: '22', name: 'ys' },
   { id: '33', name: 'lol' },
 ])
 
 function changeFirstGame() {
-  games.value[0].name = 'wzry'
-}
-
-function changeCar() {
-  //reactive 的改对象的用法
-  Object.assign(car, { name: 'car233', price: 233 })
-
-  //ref改对象的写法
-  // car.value = { name: 'car233', price: 233 };
+  games[0].name = 'wzry'
 }
 
 function changePrice() {
